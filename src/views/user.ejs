@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <%- include("./partials/header.ejs") %>
+</head>
+<body>
+    <%- include("./partials/navbar.ejs") %>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Email</th>
+            <th scope="col">UserName</th>
+            <th scope="col">City</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% for (let i=0; i < listUsers.length ; i++) {%>
+          <tr>  
+            <th scope="row"><%= listUsers[i].id %></th>
+            <td><%= listUsers[i].email %></td>
+            <td><%= listUsers[i].name %></td>
+            <td><%= listUsers[i].city %></td>
+            <td> <a href="/edit/<%= listUsers[i].id %>"> Edit </a> </td>
+          </tr>
+         <%}%>
+        </tbody>
+      </table>
+</body>
+</html>

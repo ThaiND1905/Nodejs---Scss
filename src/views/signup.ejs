@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+    <%- include("./partials/header.ejs") %>
+</head>
+<body>
+    <div class="hero">
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="login()">Login</button>
+                <button type="button" class="toggle-btn" onclick="register()">Register</button>
+            </div>
+            <div class="social-icons">
+                <img src="/images/fb.png">
+                <img src="/images/ig.png">
+                <img src="/images/tw.png">
+            </div>
+            <form id="login" action="/login" class="input-group2" method="POST" >
+                <% if(typeof message1 != "undefined" && message1) {%>
+                    <div class="alert alert-warning alert-dismissible fade show" id="message"> <%= message1 %> <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>
+                <%}%>
+                <input type="text" class="input-field" placeholder="Username" name="userid" required>
+                <input type="text" class="input-field" placeholder="Enter Password" name="password" required>
+                <input type="checkbox" class="check-box"><span> Remember password </span> </input>
+                <a class="forget-a" href="/"> Forget password? </a>
+                <button type="submit" class="submit-btn submit-btn-login">Login</button>
+            </form>
+            <form id="register" action="/singup" class="input-group2" method="POST">
+                <% if(typeof message2 != "undefined" && message2) {%>
+                    <div class="alert alert-warning alert-dismissible fade show" id="message"> <%= message2 %> <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>
+                <%}%>
+                <input type="text" class="input-field" placeholder="Username" name="username" required>
+                <input type="email" class="input-field" placeholder="Email" name="email" required>
+                <input type="text" class="input-field" placeholder="Enter Password" name="password" required>
+                <input type="text" class="input-field" placeholder="Check Password" name="passwordCheck" required>
+                <input type="checkbox" class="check-box"><span> I agree to the <a href=""> terms & conditions </a> </span></input>
+                <button type="submit" class="submit-btn">Register</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        var x = document.getElementById("login");
+        var y = document.getElementById("register");
+        var z = document.getElementById("btn");
+        function register(){
+            x.style.left = "-450px";
+            y.style.left = "25px";
+            z.style.left = "110px";    
+        }
+        function login(){
+            x.style.left = "25px";
+            y.style.left = "450px";
+            z.style.left = "0px";  
+        }
+        setTimeout(()=>{
+            const message = document.getElementById("message");
+            message.style.display = 'none';
+        },3000);
+    </script>
+</body>
+</html>

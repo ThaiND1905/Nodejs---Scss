@@ -1,0 +1,37 @@
+{
+  "name": "node-lib",
+  "version": "1.0.0",
+  "description": "Thư viện json",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/server.js"
+  },
+  "keywords": [
+    "nodejs",
+    "react"
+  ],
+  "author": "Toi",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "2.4.3",
+    "cookie-parser": "1.4.6",
+    "dotenv": "16.0.3",
+    "ejs": "3.1.8",
+    "express": "4.18.2",
+    "gulp": "4.0.2",
+    "gulp-purgecss": "5.0.0",
+    "gulp-sass": "5.1.0",
+    "joi": "17.10.2",
+    "jsonwebtoken": "9.0.2",
+    "mailgen": "2.0.28",
+    "mysql2": "2.3.3",
+    "nodemailer": "6.9.7",
+    "nvm": "0.0.4",
+    "sass": "1.69.5",
+    "util": "0.12.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}

@@ -1,0 +1,31 @@
+//theme-color:
+$signup-background: chocolate !default;
+$formbox-background: #fff !default;
+$box-shadow: #ff61241f !default;
+$span-color: #777 !default;
+$background-linear: linear-gradient(to right, #ff105f,#ffad06);
+
+//colors
+$colors: (
+    "blue": #1919e6,
+    "red" : #e61919,
+    "green" : #19e635,
+    "yellow" : #e6e619,
+    "white" : white,
+    "black" : black,
+);
+
+//spacing 
+$base-padding : 15px !default;
+$base-margin : 10px !default;
+
+//border
+$border-line: 1px solid #999;
+$base-border-radius : 20px !default;
+
+// font-style 
+$base-font-size: 12px !default;
+$font-serif : sans-serif !default;
+$font-size-sm : $base-font-size * 0.75;
+$font-size-lg : $base-font-size * 1.25;
+$font-size-xl : $base-font-size * 2   ;
